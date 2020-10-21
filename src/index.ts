@@ -1,8 +1,9 @@
+import Axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 interface IHttpClient {
   request<P, D extends any = any>(apiConfig): (params: P) => Promise<D>;
 }
 
-class AxiosClient implements IHttpClient {
+export class AxiosClient implements IHttpClient {
   static defaultFactory = () => Axios.create();
   private _factory: () => AxiosInstance;
   constructor() {
@@ -24,14 +25,14 @@ class AxiosClient implements IHttpClient {
 
 const api1 = new AxiosClient().request<string, number>({});
 
-// class FetchClient extends IHttpClient {}
+// export class FetchClient extends IHttpClient {}
 
-class MixHttpClient {
-  constructor(factory) {}
-  public request() {}
+export class MixHttpClient {
+  constructor(factory) { }
+  public request() { }
 
-  public chagneClient() {}
-  public getClient() {}
+  public chagneClient() { }
+  public getClient() { }
 }
 
 export const dingTalkClient = new AxiosClient();
@@ -44,7 +45,7 @@ export const postInfo = dingTalkClient.request<string, string>({
 });
 
 
-dingTalkClient.setFactory(()=>{
+dingTalkClient.setFactory(() => {
   const ins = Axios.create();
   ins.interceptors.request.use
   return ins
@@ -79,4 +80,4 @@ const xxx2 = xxx('/asd', () =>
 );
 
 //外部
-getUserName({ name: 'sss' });
+// getUserName({ name: 'sss' });
