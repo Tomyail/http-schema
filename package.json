@@ -15,6 +15,10 @@
     "dev": "microbundle watch --no-sourcemap --no-compress",
     "test": "jest"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "jest": "^26.6.0",
