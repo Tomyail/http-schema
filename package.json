@@ -1,6 +1,6 @@
 {
   "name": "@tomyail/http-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "git@github.com:Tomyail/http-client.git",
   "author": "tomyail",
   "license": "MIT",
