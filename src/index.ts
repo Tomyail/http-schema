@@ -19,8 +19,12 @@ export class AxiosClient implements IHttpClient {
     this._factory = factory;
   }
   public request<P, D extends any = any>(apiConfig: AxiosRequestConfig) {
-    return (params: P): Promise<D> => {
-      return this._factory().request({ ...apiConfig, params: params });
+    return (params: P, config?: AxiosRequestConfig): Promise<D> => {
+      return this._factory().request({
+        ...apiConfig,
+        ...config,
+        params: params,
+      });
     };
   }
 }
