@@ -12,7 +12,15 @@ http-schema 的作用就是把 api 的静态信息提前定义好, 并且提供�
 
 ## 基本使用方式
 
+安装:
+
+```
+yarn add @tomyail/http-schema
+```
+
 ```typescript
+
+import { HttpSchema } from '@tomyail/http-schema'
 // 假设我们有两个不同的服务A 和 B, A 服务主要关注用户信息,B 服务主要关注内容信息
 
 //////////////以下代码先定义 api 的静态信息////////////////////////////////////////////////////
