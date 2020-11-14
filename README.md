@@ -1,6 +1,6 @@
 # http-schema
 
-http-schema 的目的是为了更好的定义接口的静态配置. 它的实现和具体的请求库(比如用 axios 或者 fetch)无关, 借助 typescript 的类型推导,为开发提供良好的类型提示
+http-schema 的目的是为了更好的定义接口的静态配置. 它的实现和具体的请求库(比如用 axios 或者 fetch)无关, 借助 typescript 的类型推导和一点点函数式思想,为开发提供良好的类型提示
 
 ## 造这个轮子的目的?
 
